@@ -8,10 +8,10 @@ function App() {
   const getYalantisData = () => {
     Axios.get('https://yalantis-react-school-api.yalantis.com/api/task0/users').then((resoponse)=>{
       console.log(resoponse);
-      yalantisData(resoponse.data.map(e=> e.firstName + " "+ e.lastName + ","))
+      yalantisData(resoponse.data.map(e=><div> {e.firstName} {e.lastName};</div>))
     })
   }
-  return (<div> Hello world <button onClick={getYalantisData}> get Data </button>{yalantis}   </div>);
+  return (<div> Get request Yalantis <button onClick={getYalantisData}> get Data </button>{yalantis}   </div>);
 
 }
 
