@@ -10,8 +10,9 @@ function App() {
       console.log(resoponse);
       yalantisData(resoponse.data.map(e=><div> {e.firstName} {e.lastName};</div>))
     })
+    
   }
-  return (<div> Get request Yalantis <button onClick={getYalantisData}> get Data </button>{yalantis}   </div>);
+  return (<div> list:    <button onClick={getYalantisData}> get Data </button> {yalantis}  </div>);
 
 }
 
