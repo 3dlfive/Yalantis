@@ -24,15 +24,13 @@ function cEntry(ydata) {
 
 function App() {
 
-  const [yalantis, yalantisData] = React.useState("")
-
-
   const alpabet = [...String.fromCharCode(...Array(123).keys()).slice(97)];
 
+  const [yalantis, yalantisData] = React.useState("")
 
   React.useEffect(() => {
     Axios.get('https://yalantis-react-school-api.yalantis.com/api/task0/users').then((resoponse) => {
-      //console.log(resoponse.data);
+  
       // yalantisData(resoponse.data.map(e => < div > {
       //     e.firstName
       //   } {
