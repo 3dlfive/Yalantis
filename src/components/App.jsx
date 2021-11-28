@@ -30,11 +30,11 @@ React.useEffect(() => {
     const filtD = filterYantis.filter(el=>el.lastName[0]===e)
     console.log(filtD);
     return (
-    <div>
+    <>
+    <h2>{e}</h2>
 
-    {e}
-    {filtD.map(e=> e.lastName+" "+e.firstName)}
-  </div>)}
+    {filtD.map(e=><p>{e.lastName} {e.firstName}</p> )}
+  </>)}
 )}
   </div>);
 
