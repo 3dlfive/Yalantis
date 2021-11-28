@@ -15,7 +15,8 @@ React.useEffect(() => {
 
   })
 
-  return (<div> list:   {yalantis.filter(i=> i.lastName.charAt(0)=="A")}  {alpabet.map(e=><div>{e.toUpperCase()}
+  return (<div> list:   {yalantis.filter(i=> i.lastName.charAt(0)=="A")} //фильтрация
+  {alpabet.map(e=><div>{e.toUpperCase()}
   </div>)}
   </div>);
 
