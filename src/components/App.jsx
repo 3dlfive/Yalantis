@@ -21,7 +21,7 @@ React.useEffect(() => {
   if (a.lastName < b.lastName) {
     return -1;
   }
-  // a должно быть равным b
+  //  должно быть равным b
   return 0;
 });
   console.log(yalantisData);
