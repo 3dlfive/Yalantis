@@ -8,14 +8,16 @@ function App() {
 
   const alpabet =[...String.fromCharCode(...Array(123).keys()).slice(97)];
 
-
 React.useEffect(() => {
     Axios.get('https://yalantis-react-school-api.yalantis.com/api/task0/users').then((resoponse)=>{
-      yalantisData(resoponse.data.map(e=><div> {e.firstName} {e.lastName};</div>))
+      yalantisData(resoponse.data.map(e=><div> <p>{e.firstName} {e.lastName}</p></div>))
     })
 
   })
-  return (<div> list:    {yalantis} {alpabet.map(e=><div>{e.toUpperCase()}</div>)} </div>);
+
+  return (<div> list:   {yalantis.filter(i=> i.lastName.charAt(0)=="A")}  {alpabet.map(e=><div>{e.toUpperCase()}
+  </div>)}
+  </div>);
 
 }
 
