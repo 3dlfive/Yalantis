@@ -24,15 +24,15 @@ React.useEffect(() => {
   //  должно быть равным b
   return 0;
 });
-  console.log(yalantisData);
-  return (<div> list:    //фильтрация
+
+  return (<div> <b>Employers:</b> 
   {alpabet.map(e=> {
     const filtD = filterYantis.filter(el=>el.lastName[0]===e)
 
     return (
         <>
     <h2>{e}</h2>
-    {filtD.map(e=><p>{e.lastName} {e.firstName} <Checkbox /></p>)} 
+    {filtD.map(e=><p>{e.lastName} {e.firstName} <Checkbox /></p>)}
     </>
   )}
 )}
