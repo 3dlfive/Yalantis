@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Axios from 'axios';
-
+import Checkbox from "./Checkbox"
 function App() {
 
   const [yalantis, yalantisData] = React.useState([])
@@ -28,13 +28,13 @@ React.useEffect(() => {
   return (<div> list:    //фильтрация
   {alpabet.map(e=> {
     const filtD = filterYantis.filter(el=>el.lastName[0]===e)
-    console.log(filtD);
-    return (
-    <>
-    <h2>{e}</h2>
 
-    {filtD.map(e=><p>{e.lastName} {e.firstName}</p> )}
-  </>)}
+    return (
+        <>
+    <h2>{e}</h2>
+    {filtD.map(e=><p>{e.lastName} {e.firstName} <Checkbox /></p>)} 
+    </>
+  )}
 )}
   </div>);
 
